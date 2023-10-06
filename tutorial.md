@@ -455,3 +455,5 @@ To have access to the full codebase, here is the link to the project repo on [gi
 - https://docs.flare.network/tech/flare/
 - https://docs.flare.network/dev/tutorials/ftso/getting-data-feeds/
 
+                                                                                                                                  [Back to Top](#top)
+
