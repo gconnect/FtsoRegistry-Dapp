@@ -1,9 +1,11 @@
-Tutorial Outline
-
-# Building your First Dapp on the Flare Blockchain
+# Building a Price Listing Dapp using the Flare FtsoRegistry contract
 
 ## Introduction
-This tutorial will take you through a step-by-step guide on how to interact with the IFtsoRegistry, how to create a smart contract, deploy it to the Flare Blockchain and interact with it on the frontend on a nextjs app.
+In this tutorial, we will create a Price Listing Dapp using the Flare FtsoRegistry contract. This Dapp will allow users to fetch the current prices of various assets.
+
+Our goal is to empower users to access real-time price data for cryptocurrencies, tokens, and other assets without relying on centralized authorities. By building this Dapp, we aim to demonstrate the potential of blockchain technology in providing transparent and tamper-proof access to critical financial data.
+
+We will be using Next.js for the frontend to display the supported symbols and their current prices.
 
 Flare is the blockchain for data. It is a layer 1, EVM smart contract platform designed to expand the utility of blockchain
 
@@ -51,7 +53,7 @@ interface IFtsoRegistry {
      * @dev Sets `_symbol` A string representing the symbol for which the price is requested (e.g., "BTC" for Bitcoin).
      * Returns `_price` An unsigned integer representing the current price of the symbol, 
      * `_timestamp` An unsigned integer representing the timestamp of the price data and
-     *  `_assetPriceUsdDecimals` An unsigned integer specifying the number of decimals to divide _price to get the actual USD value
+     * `_assetPriceUsdDecimals` An unsigned integer specifying the number of decimals to divide _price to get the actual USD value
      */
     function getCurrentPriceWithDecimals(string memory _symbol) 
         external view 

@@ -10,15 +10,23 @@ const ftsoPriceFeedContract = new ethers.Contract(
     provider);
 
 export const getSupportedSymbols = async () => {
-    const symbol = await ftsoPriceFeedContract.getSupportedSymbols();
-    console.log(symbol)
-    return symbol
+    try{
+        const symbol = await ftsoPriceFeedContract.getSupportedSymbols();
+        console.log(symbol)
+        return symbol
+    }catch(error){
+        console.error(error)
+    }
 }
 
 export const getPriceWithDecimals = async (_symbol: string) => {
-    const [_price, _timestamp, _decimals] = await ftsoPriceFeedContract.getPriceWithDecimals(_symbol);
-    const latestPrice = Number(_price) / Math.pow(10, Number(_decimals))
-    const formattedDate = new Date(Number(_timestamp) * 1000)
-    console.log(`${latestPrice} ${formattedDate}`)
-    return {latestPrice, formattedDate}
+    try{
+        const [_price, _timestamp, _decimals] = await ftsoPriceFeedContract.getPriceWithDecimals(_symbol);
+        const latestPrice = Number(_price) / Math.pow(10, Number(_decimals))
+        const formattedDate = new Date(Number(_timestamp) * 1000)
+        console.log(`${latestPrice} ${formattedDate}`)
+        return {latestPrice, formattedDate}
+    }catch(error){
+        console.error(error)
+    }
 }

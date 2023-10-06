@@ -13,20 +13,30 @@ const ftsoRegistry = new ethers.Contract(
     provider);
 
 const getSymbols = async () => {
-   const symbols = await ftsoRegistry.getSupportedSymbols();
-   console.log(symbols)
-   return symbols
+    try{
+        const symbols = await ftsoRegistry.getSupportedSymbols();
+        console.log(symbols)
+        return symbols
+    }catch(error){
+        console.error(error)
+    }
 }
  const getLatestPriceFromFTSO = async () => {
-    // Get Latest Price
-    const [_price, _timestamp, _decimals] =
-        await ftsoRegistry["getCurrentPriceWithDecimals(string)"]("testUSDC");
-        console.log(_price)
-    const latestPrice = Number(_price) / Math.pow(10, Number(_decimals))
-    console.log(`${Number(_price) / Math.pow(10, Number(_decimals))} USD`);
-    console.log(`Calculated at ${new Date(Number(_timestamp) * 1000)}`);
+    try{
+        // Get Latest Price
+        const [_price, _timestamp, _decimals] =
+            await ftsoRegistry["getCurrentPriceWithDecimals(string)"]("testUSDC");
+            console.log(_price)
+        const latestPrice = Number(_price) / Math.pow(10, Number(_decimals))
+        console.log(`${Number(_price) / Math.pow(10, Number(_decimals))} USD`);
+        console.log(`Calculated at ${new Date(Number(_timestamp) * 1000)}`);
 
-    return latestPrice
+        return latestPrice
+    }catch(error){
+        console.error(error)
+
+    }
 }
+
 getSymbols()
 getLatestPriceFromFTSO()
