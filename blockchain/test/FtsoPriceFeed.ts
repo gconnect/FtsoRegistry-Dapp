@@ -20,10 +20,9 @@ describe('FtsoPriceFeed', function () {
     const supportedSymbols: string[] = await ftsoPriceFeed.getSupportedSymbols();
     console.log(supportedSymbols)
     // Perform assertions
-    // expect(supportedSymbols).to.be.an('array');
+    expect(supportedSymbols).to.be.an('array');
     // expect(supportedSymbols).to.deep.equal(['C2FLR', 'testLTC', 'testDOGE']); // Check the contents of the array
 
-    // Add more assertions as needed
   });
 
   it('should return price with decimals', async function () {
@@ -31,9 +30,8 @@ describe('FtsoPriceFeed', function () {
     const [price, decimals, timestamp]: [number, number, number] = await ftsoPriceFeed.getPriceWithDecimals(symbol);
     console.log(price)
     // // Perform assertions
-    // expect(price).to.be.a('number');
-    // expect(decimals).to.be.a('number');
-    // expect(timestamp).to.be.a('number');
-    // Add more assertions as needed
+    expect(price).to.be.a('number');
+    expect(decimals).to.be.a('number');
+    expect(timestamp).to.be.a('number');
   });
 });
