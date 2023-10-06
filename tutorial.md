@@ -14,7 +14,8 @@ At the end of this tutorial, we will have an output that looks like this;
 
 **Fig: 1** Final UI
 
-<img width="760" alt="Screenshot 2023-10-06 at 8 50 43 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/0e3a333f-7afc-47e7-99c2-4d35af5a1113">
+<img width="1509" alt="Screenshot 2023-10-06 at 9 36 46 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/8b43f37b-18df-4a65-bada-6ec047d12ca4">
+
 
 ## Prerequisite
 To successfully follow along in this tutorial you need basic knowledge of:
@@ -45,9 +46,11 @@ npm i hardhat @flarenetwork/flare-periphery-contracts dotenv
 ```
 
 **Fig: 2** Node Initialization and Dependencies Installation
+
 <img width="556" alt="Screenshot 2023-10-05 at 12 30 53 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/994ec8d5-5e3f-4273-8570-17915f43bc98">
 
 **Fig: 3** Hardhat Installation
+
 <img width="1512" alt="Screenshot 2023-10-05 at 12 31 45 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/49f94ff5-f9da-4f2a-9456-ec1cf2928fba">
 
 
