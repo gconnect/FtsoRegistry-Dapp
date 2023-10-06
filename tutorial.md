@@ -18,7 +18,7 @@
   
   - [Compile and Deploy Smart Contract](#compile-and-deploy-smart-contract)
 
-- [Create a Next.js Frontend](#create-a-nextjs-app)
+- [Create a Next.js Frontend](#create-a-nextjs-frontend)
 
 - [Run Your Next.js App](#run-your-nextjs-app)
 
