@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 interface IFtsoRegistry { 
 
     // Returns the list of supported symbols like BTC, ETH, FLR... 

@@ -57,6 +57,8 @@ Inside the `blockchain` directory, navigate to the `contract` directory and crea
 **IFtsoRegistry.sol**
 
 ```solidity
+// SPDX-License-Identifier: MIT
+
 interface IFtsoRegistry { 
 
     // Returns the list of supported symbols like BTC, ETH, FLR... 
