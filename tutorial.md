@@ -1,5 +1,28 @@
 # Building a Price Listing Dapp using the Flare FtsoRegistry contract
 
+# Table of Content
+
+- [Building a Price Listing Dapp using the Flare FtsoRegistry contract](#building-a-price-listing-dapp-using-the-flare-ftsoregistry-contract)
+- [Table of Content](#table-of-content)
+  - [Introduction](#introduction)
+  - [Prerequisite](#prerequisite)
+  - [Requirements](#requirements)
+  - [Let's Get Started](#lets-get-started)
+    - [Environment Setup](#environment-setup)
+    - [Setup a Flare Wallet](#setup-a-flare-wallet)
+    - [Create a Smart Contract](#create-a-smart-contract)
+    - [Compile and Deploy Contracts](#compile-and-deploy-contracts)
+  - [scripts/deploy.ts](#scriptsdeployts)
+  - [Optional](#optional)
+  - [interact.ts (Node  Interraction With FtsoRegistry )](#interactts-node--interraction-with-ftsoregistry-)
+  - [scripts/contract-interact.ts](#scriptscontract-interactts)
+    - [Create a Next.js Frontend](#create-a-nextjs-frontend)
+  - [utils/interact.ts - Frontend Smart Contract Interactions](#utilsinteractts---frontend-smart-contract-interactions)
+    - [page.tsx](#pagetsx)
+    - [Run Your Next.js App](#run-your-nextjs-app)
+  - [Conclusion](#conclusion)
+  - [References](#references)
+
 ## Introduction
 In this tutorial, we will create a Price Listing Dapp using the Flare FtsoRegistry contract. This Dapp will allow users to fetch the current prices of various assets.
 
@@ -7,7 +30,15 @@ Our goal is to empower users to access real-time price data for cryptocurrencies
 
 Flare is the blockchain for data. It is a layer 1, EVM smart contract platform designed to expand the utility of blockchain.
 
-If you prefer to div directly to the complete code. You can find it [here]([github](https://github.com/gconnect/FtsoRegistry-Dapp)).
+If you prefer to dive directly to the complete code. You can find it [here]([github](https://github.com/gconnect/FtsoRegistry-Dapp)).
+
+
+At the end of this tutorial, we will have an output that looks like this;
+
+**Fig: 1** Final UI
+
+<img width="1509" alt="Screenshot 2023-10-06 at 9 36 46 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/8b43f37b-18df-4a65-bada-6ec047d12ca4">
+
 
 ## Prerequisite
 To successfully follow along in this tutorial you need basic knowledge of:
@@ -37,12 +68,25 @@ npm init -y
 npm i hardhat @flarenetwork/flare-periphery-contracts dotenv
 ```
 
+**Fig: 2** Node Initialization and Dependencies Installation
+
+<img width="556" alt="Screenshot 2023-10-05 at 12 30 53 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/994ec8d5-5e3f-4273-8570-17915f43bc98">
+
+**Fig: 3** Hardhat Installation
+
+<img width="1512" alt="Screenshot 2023-10-05 at 12 31 45 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/49f94ff5-f9da-4f2a-9456-ec1cf2928fba">
+
+
 Inside the frontend following dependencies;
 ```shell
    npx create-next-app@latest
    npm i ethers 
 
 ```
+**Fig: 4** Next.js Installation
+<img width="1184" alt="Screenshot 2023-10-05 at 3 03 49 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/6aa71c64-a0c0-4d46-9dd7-11a7de800f22">
+
+
 
 ### Setup a Flare Wallet 
 Before performing a transaction on the Flare Blockchain you will need to have an account setup.You can use the Coston2 testnet wallet for testing purposes. 
@@ -160,6 +204,12 @@ Run this command to deploy the contract;
 ```shell
 npx hardhat run scripts/deploy.ts --network coston2
 ```
+
+Once successfully deployed, you will see you contract address which you can check up on the explorer. something like this [0xc87dc7bAE2A34D725Ed9E7fE138848E8fe438368](https://coston2-explorer.flare.network/address/0xc87dc7bAE2A34D725Ed9E7fE138848E8fe438368)
+
+**Fig-5:** Deployed Contract on the Explorer
+<img width="1512" alt="Screenshot 2023-10-06 at 9 28 03 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/b7e18a19-dde0-4dd4-a6b7-08661d6670b1">
+
 ## Optional
 Inside the `script` directory create two files. `interact.ts` and `contract-interact.ts`.
 
@@ -259,15 +309,19 @@ getSymbol()
 getPriceWithDecimals()
 
 ```
-To run the code simply open up your terminal. Ensure you are on this directory `blockcahain/scripts`
+To run the code simply open up your terminal. Ensure you are on this directory `blockchain/scripts`
 
 ```shell
     node interact.ts
     node contract-interact.ts
 ```
 
+**Fig-7:** Output from Node
+<img width="883" alt="Screenshot 2023-10-06 at 9 33 11 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/ddc7afc7-1663-4f32-9361-8acb7eecd53f">
+
+
 ### Create a Next.js Frontend
-For this tutorial we will be using [Next.js](https://nextjs.org/docs/getting-started/installation). To keep things simple and short we will be building a simple UI. 
+For this tutorial, we will be using [Next.js](https://nextjs.org/docs/getting-started/installation). To keep things simple and short we will be building a simple UI. 
 
 Navigate to the `frontend directory`
 create a `utils` directory and an `interact.ts` file inside it.
@@ -330,8 +384,8 @@ export default function Home() {
 
   useEffect(() =>{
     const getLatestPrice = async (symbol: string) => {
-      const {latestPrice, formattedDate} = await getPriceWithDecimals(symbol)
-      return latestPrice
+      const data = await getPriceWithDecimals(symbol)
+      return data?.latestPrice
     }
 
     const getSymbols = async () => {
@@ -375,6 +429,7 @@ export default function Home() {
     </main>
   )
 }
+
 ```
 
 Next.js has both app router and pages router option for this tutorial we will be using **app router**. Click [here](https://nextjs.org/docs/app/building-your-application/routing) to learn more about app router.
@@ -399,4 +454,6 @@ To have access to the full codebase, here is the link to the project repo on [gi
 ## References
 - https://docs.flare.network/tech/flare/
 - https://docs.flare.network/dev/tutorials/ftso/getting-data-feeds/
+
+[Back to Top](#top)
 

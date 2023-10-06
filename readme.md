@@ -1,6 +1,8 @@
 # Simple FtsoRegistry Dapp
 This a simple dApp illustrating how to interact with Flare FtsoRegistry Contract.
 
+<img width="760" alt="Screenshot 2023-10-06 at 8 50 43 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/8f01e04e-1e0f-436f-980e-99e3144746be">
+
 # IFtsoRegistry.sol
 More detailed documentation has been added to the `IFtsoRegistry.sol` and it can be found in [IFtsoRegistry.sol](https://github.com/gconnect/FtsoRegistry-Dapp/blob/master/blockchain/contracts/IFtsoRegistry.sol)
 
@@ -13,7 +15,7 @@ The JavaScript interactions were done in two ways. The FtsoRegisry was implement
 The Next.js frontend interaction can be found in [utils/interact.ts](https://github.com/gconnect/FtsoRegistry-Dapp/blob/master/frontend/utils/interact.ts)
 
 # Tutorial
-For a more detailed guide on implementing the FtsoRegsitry and building this dApp check out the [tutorial.md](https://github.com/gconnect/FtsoRegistry-Dapp/blob/master/tutorial.md)
+For a more detailed guide on implementing the FtsoRegistry and building this dApp check out the [tutorial.md](https://github.com/gconnect/FtsoRegistry-Dapp/blob/master/tutorial.md)
 
 # Live Demo
 Click [here](https://ftsoregistry.vercel.app/) to view the live version of the dApp. 
