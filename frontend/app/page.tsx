@@ -9,8 +9,8 @@ export default function Home() {
 
   useEffect(() =>{
     const getLatestPrice = async (symbol: string) => {
-      const {latestPrice, formattedDate} = await getPriceWithDecimals(symbol)
-      return latestPrice
+      const data = await getPriceWithDecimals(symbol)
+      return data?.latestPrice
     }
 
     const getSymbols = async () => {
