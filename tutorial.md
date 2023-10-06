@@ -4,25 +4,25 @@
 
 - [Introduction](#introduction)
 
-- Prerequisite
+- [Prerequisite](#prerequisite)
 
-- Requirements
+- [Requirements](#requirements)
 
-- Let's Get Started
+- [Let's Get Started](#lets-get-started)
 
-- Environment Setup
+- [Environment Setup](environment-setup)
 
-- Setup a Flare Wallet 
+- [Setup a Flare Wallet](setup-a-flare-wallet)
 
-- Create a Smart Contract
+- [Create a Smart Contract](create-a-smart-contract)
 
-- Create a Next.js Frontend
+- [Create a Next.js Frontend](create-a-next.js-app)
 
-- Run Your Next.js App
+- [Run Your Next.js App](run-your-next.js-app)
 
-- Conclusion
+- [Conclusion](conclusion)
 
-- References
+- [References](references)
 
 ## Introduction
 In this tutorial, we will create a Price Listing Dapp using the Flare FtsoRegistry contract. This Dapp will allow users to fetch the current prices of various assets.
