@@ -176,6 +176,12 @@ Run this command to deploy the contract;
 ```shell
 npx hardhat run scripts/deploy.ts --network coston2
 ```
+
+Once successfully deployed, you will see you contract address which you can check up on the explorer. something like this [0xc87dc7bAE2A34D725Ed9E7fE138848E8fe438368](https://coston2-explorer.flare.network/address/0xc87dc7bAE2A34D725Ed9E7fE138848E8fe438368)
+
+**Fig-5:** Deployed Contract on the Explorer
+<img width="1512" alt="Screenshot 2023-10-06 at 9 28 03 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/b7e18a19-dde0-4dd4-a6b7-08661d6670b1">
+
 ## Optional
 Inside the `script` directory create two files. `interact.ts` and `contract-interact.ts`.
 
@@ -281,6 +287,10 @@ To run the code simply open up your terminal. Ensure you are on this directory `
     node interact.ts
     node contract-interact.ts
 ```
+
+**Fig-7:** Output from Node
+<img width="883" alt="Screenshot 2023-10-06 at 9 33 11 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/ddc7afc7-1663-4f32-9361-8acb7eecd53f">
+
 
 ### Create a Next.js Frontend
 For this tutorial, we will be using [Next.js](https://nextjs.org/docs/getting-started/installation). To keep things simple and short we will be building a simple UI. 
