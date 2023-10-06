@@ -16,7 +16,7 @@
 
 - [Create a Smart Contract and IFtsoRegistry](#create-a-smart-contract)
   
-  - [Compile and Deploy Smart Contract](#compile-and-deploy-smart-contract)
+  - [Compile and Deploy Contracts](#compile-and-deploy-contracts)
 
 - [Create a Next.js Frontend](#create-a-nextjs-frontend)
 
