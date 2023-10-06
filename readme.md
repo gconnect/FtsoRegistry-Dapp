@@ -18,3 +18,13 @@ For a more detailed guide on implementing the FtsoRegsitry and building this dAp
 # Live Demo
 Click [here](https://ftsoregistry.vercel.app/) to view the live version of the dApp. 
 
+# Setup Instruction
+- Fork/ clone the repository
+- Navigate to the frontend directory and run `npm i` this will install all required dependencies
+- To start the local server, run `npm run dev`. This will start the local server at `http://localhost:3000/`
+
+# Disclaimer
+This contract is unaudited. Use with discrection!
+
+# License
+This repository is licensed to be used freely.
