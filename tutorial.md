@@ -7,7 +7,14 @@ Our goal is to empower users to access real-time price data for cryptocurrencies
 
 Flare is the blockchain for data. It is a layer 1, EVM smart contract platform designed to expand the utility of blockchain.
 
-If you prefer to div directly to the complete code. You can find it [here]([github](https://github.com/gconnect/FtsoRegistry-Dapp)).
+If you prefer to dive directly to the complete code. You can find it [here]([github](https://github.com/gconnect/FtsoRegistry-Dapp)).
+
+
+At the end of this tutorial, we will have an output that looks like this;
+
+**Fig: 1** Final UI
+
+<img width="760" alt="Screenshot 2023-10-06 at 8 50 43 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/0e3a333f-7afc-47e7-99c2-4d35af5a1113">
 
 ## Prerequisite
 To successfully follow along in this tutorial you need basic knowledge of:
@@ -37,12 +44,23 @@ npm init -y
 npm i hardhat @flarenetwork/flare-periphery-contracts dotenv
 ```
 
+**Fig: 2** Node Initialization and Dependencies Installation
+<img width="556" alt="Screenshot 2023-10-05 at 12 30 53 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/994ec8d5-5e3f-4273-8570-17915f43bc98">
+
+**Fig: 3** Hardhat Installation
+<img width="1512" alt="Screenshot 2023-10-05 at 12 31 45 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/49f94ff5-f9da-4f2a-9456-ec1cf2928fba">
+
+
 Inside the frontend following dependencies;
 ```shell
    npx create-next-app@latest
    npm i ethers 
 
 ```
+**Fig: 4** Next.js Installation
+<img width="1184" alt="Screenshot 2023-10-05 at 3 03 49 AM" src="https://github.com/gconnect/FtsoRegistry-Dapp/assets/23031920/6aa71c64-a0c0-4d46-9dd7-11a7de800f22">
+
+
 
 ### Setup a Flare Wallet 
 Before performing a transaction on the Flare Blockchain you will need to have an account setup.You can use the Coston2 testnet wallet for testing purposes. 
@@ -257,7 +275,7 @@ getSymbol()
 getPriceWithDecimals()
 
 ```
-To run the code simply open up your terminal. Ensure you are on this directory `blockcahain/scripts`
+To run the code simply open up your terminal. Ensure you are on this directory `blockchain/scripts`
 
 ```shell
     node interact.ts
@@ -265,7 +283,7 @@ To run the code simply open up your terminal. Ensure you are on this directory `
 ```
 
 ### Create a Next.js Frontend
-For this tutorial we will be using [Next.js](https://nextjs.org/docs/getting-started/installation). To keep things simple and short we will be building a simple UI. 
+For this tutorial, we will be using [Next.js](https://nextjs.org/docs/getting-started/installation). To keep things simple and short we will be building a simple UI. 
 
 Navigate to the `frontend directory`
 create a `utils` directory and an `interact.ts` file inside it.
