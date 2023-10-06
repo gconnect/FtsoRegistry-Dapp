@@ -10,7 +10,7 @@ More detailed documentation has been added to the `IFtsoRegistry.sol` and it can
 The JavaScript interactions were done in two ways. The FtsoRegisry was implemented on the `FtsoPriceFeeds.sol` contract. The code that handles interactions can be found in the [contract-interact.ts](https://github.com/gconnect/FtsoRegistry-Dapp/blob/master/blockchain/scripts/contract-interact.ts) and [interact.ts](https://github.com/gconnect/FtsoRegistry-Dapp/blob/master/blockchain/scripts/interact.ts) file.
 
 ## Next.js Interaction
-The Next.js frontend interaction can be found in [utils/interact.ts]()
+The Next.js frontend interaction can be found in [utils/interact.ts](https://github.com/gconnect/FtsoRegistry-Dapp/blob/master/frontend/utils/interact.ts)
 
 # Tutorial
 For a more detailed guide on implementing the FtsoRegsitry and building this dApp check out the [tutorial.md](https://github.com/gconnect/FtsoRegistry-Dapp/blob/master/tutorial.md)
