@@ -1,6 +1,6 @@
 "use client"; 
 import { useEffect, useState } from "react"
-import { getSupportedSymbols, getPriceWithDecimals } from "./utils/interact";
+import { getSupportedSymbols, getPriceWithDecimals } from "../utils/interact";
 
 export default function Home() {
 

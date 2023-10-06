@@ -1,5 +1,5 @@
 import { ethers,  JsonRpcProvider } from "ethers"
-import priceFeedAbi from "../../FtsoPriceFeed.json"
+import priceFeedAbi from "../FtsoPriceFeed.json"
 const contractAddress = "0xc87dc7bAE2A34D725Ed9E7fE138848E8fe438368"
 const FLARE_RPC = "https://coston2-api.flare.network/ext/C/rpc";
 const provider = new JsonRpcProvider(FLARE_RPC);
