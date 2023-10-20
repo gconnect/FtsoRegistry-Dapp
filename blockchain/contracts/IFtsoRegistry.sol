@@ -13,9 +13,14 @@ interface IFtsoRegistry {
     // @return _price The USD price of the requested symbol
     // @return _timestamp The timestamp when the price information was recorded
     // @return _assetPriceUsdDecimals The number of decimals for the asset's price
-    // @dev This function doesn't revert.
+    // @dev Method Revert: This function can revert in the following scenarios:
+       // If the requested symbol does not exist or is not supported.
+       // If there is an issue with retrieving the price data.
+        // If the provided _symbol parameter is empty or invalid.
     // @dev The `_timestamp` is in Unix timestamp format (seconds since epoch).
-    // @dev There are no special values for the parameters.
+    // @dev Special Values: _symbol: This parameter should contain the symbol for the asset you want to query, such as "BTC" or "ETH."
+      // _price: The _price value represents the USD price of the requested symbol. 
+     // The actual price is obtained by dividing this value by 10^_assetPriceUsdDecimals. For example, if _price is 1234 and _assetPriceUsdDecimals is 2, the actual price is 12.34 USD..
     function getCurrentPriceWithDecimals(string memory _symbol)
         external
         view
